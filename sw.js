@@ -1,8 +1,8 @@
 const BASE = new URL(self.registration.scope);
 const PREFIX = 'hinode-pages:' + BASE.pathname + ':';
-const CACHE = PREFIX + 'v21-ff67187e08b5';
+const CACHE = PREFIX + 'v261-direct-88ab3b8e5cac';
 const url = p => new URL(p, BASE).href;
-const FILES = ["./", "index.html", "static/app.js", "static/icon-192.png", "static/icon-512.png", "static/manifest.json", "static/style.css", "static/vendor/assets.json", "static/vendor/exceljs.js", "static/vendor/ind.traineddata.gz", "static/vendor/jspdf.js", "static/vendor/jszip.js", "static/vendor/tesseract-core-lstm.wasm", "static/vendor/tesseract-core-lstm.wasm.js", "static/vendor/tesseract-core-simd-lstm.wasm", "static/vendor/tesseract-core-simd-lstm.wasm.js", "static/vendor/tesseract-core-simd.wasm", "static/vendor/tesseract-core-simd.wasm.js", "static/vendor/tesseract-core.wasm", "static/vendor/tesseract-core.wasm.js", "static/vendor/tesseract.js", "static/vendor/worker.min.js", "static/logo-hinode.png"];
+const FILES = ["./", "index.html", "static/app.js", "static/icon-192.png", "static/icon-512.png", "static/manifest.json", "static/style.css", "static/vendor/assets.json", "static/vendor/exceljs.js", "static/vendor/ind.traineddata.gz", "static/vendor/jspdf.js", "static/vendor/jszip.js", "static/vendor/tesseract-core-lstm.wasm", "static/vendor/tesseract-core-lstm.wasm.js", "static/vendor/tesseract-core-simd-lstm.wasm", "static/vendor/tesseract-core-simd-lstm.wasm.js", "static/vendor/tesseract-core-simd.wasm", "static/vendor/tesseract-core-simd.wasm.js", "static/vendor/tesseract-core.wasm", "static/vendor/tesseract-core.wasm.js", "static/vendor/tesseract.js", "static/vendor/worker.min.js", "static/logo-hinode.png", "static/hinode-cat-180.png", "static/hinode-cat-192.png", "static/hinode-cat-512.png", "static/hinode-cat-maskable-512.png", "static/hinode-cat-32.png"];
 self.addEventListener('install', e => e.waitUntil((async()=>{
   const c = await caches.open(CACHE);
   try { await c.addAll(FILES.map(p=>new Request(url(p),{cache:'reload'}))); }
